@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <style>
+    .body {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      color: goldenrod;
+      font-size: 6rem;
+      margin: 0 1rem;
+    }
+  </style>
+  <body>
+    <div class="body">
+      <div class="container">
+        <p id="day">0</p>
+        <p id="hour">0</p>
+        <p id="min">0</p>
+        <p id="sec">0</p>
+        <p id="mil">0</p>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
