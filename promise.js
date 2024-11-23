@@ -1,4 +1,4 @@
-const hasMeeting = true;
+const hasMeeting = false;
 
 const meeting = new Promise((resolve, reject) => {
   if (!hasMeeting) {
@@ -12,12 +12,18 @@ const meeting = new Promise((resolve, reject) => {
   }
 });
 
-console.log(meeting);
+const addTocalender = (meeetingDetails) => {
+  const schedule = `${meeetingDetails.name} is schedule for ${meeetingDetails.location}`;
+
+  return Promise.resolve(schedule);
+};
 
 meeting
-  .then((result) => {
-    console.log(result);
+  .then(addTocalender)
+  .then((schedule) => {
+    console.log(schedule);
   })
   .catch((err) => {
     console.log(err.message);
   });
+//   git config --global http.postBuffer 1048576000
